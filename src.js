@@ -175,10 +175,10 @@ mw.hook('wikipage.content').add(async function() {
         mw.util.addCSS("[class~=userhighlighter_pgmvr],[class~=userhighlighter_flmvr] {background-color: #FFEF00}");
         mw.util.addCSS("[class~=userhighlighter_temop] {background-color: #FFEF00}");
         mw.util.addCSS("[class~=userhighlighter_sysop] {background-color: #8CF1FF}");
+        mw.util.addCSS("[class~=userhighlighter_interface-admin][class~=userhighlighter_sysop] {background-color: #8CF1FF}");
         mw.util.addCSS("[class~=userhighlighter_checkuser][class~=userhighlighter_sysop] {background-color: #63FFCB}");
         mw.util.addCSS("[class~=userhighlighter_suppress][class~=userhighlighter_sysop] {background-color: #63FFCB}");
         mw.util.addCSS("[class~=userhighlighter_arbcom][class~=userhighlighter_sysop] {background-color: #63FFCB}");
-        mw.util.addCSS("[class~=userhighlighter_interface-admin][class~=userhighlighter_sysop] {background-color: #8CF1FF}");
         mw.util.addCSS("[class~=userhighlighter_bureaucrat][class~=userhighlighter_sysop] {background-color: #E2B1FF}");
         mw.util.addCSS("[class~=userhighlighter_steward] {background-color: #FFA8A8}");
         $('#article a, #bodyContent a, #mw_contentholder a').each(function(index,linkraw){
@@ -213,10 +213,6 @@ mw.hook('wikipage.content').add(async function() {
                             link.addClass(link.attr('class') + ' userhighlighter_arbcom');
                             usergroupNames.push("Arbitration Committee member");
                         }
-                        if(usergroups.includes(groups.interfaceadmin)) {
-                            link.addClass(link.attr('class') + ' userhighlighter_interface-admin');
-                            usergroupNames.push("interface administrator");
-                        }
                         if(usergroups.includes(groups.suppress)) {
                             link.addClass(link.attr('class') + ' userhighlighter_suppress');
                             usergroupNames.push("oversighter");
@@ -224,6 +220,10 @@ mw.hook('wikipage.content').add(async function() {
                         if(usergroups.includes(groups.checkuser)) {
                             link.addClass(link.attr('class') + ' userhighlighter_checkuser');
                             usergroupNames.push("checkuser");
+                        }
+                        if(usergroups.includes(groups.interfaceadmin)) {
+                            link.addClass(link.attr('class') + ' userhighlighter_interface-admin');
+                            usergroupNames.push("interface administrator");
                         }
                         if (usergroups.includes(groups.sysop)) {
                             link.addClass(link.attr('class') + ' userhighlighter_sysop');
