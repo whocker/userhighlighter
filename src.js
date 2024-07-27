@@ -175,9 +175,9 @@ mw.hook('wikipage.content').add(async function() {
         mw.util.addCSS("[class~=userhighlighter_pgmvr],[class~=userhighlighter_flmvr] {background-color: #FFEF00}");
         mw.util.addCSS("[class~=userhighlighter_temop] {background-color: #FFEF00}");
         mw.util.addCSS("[class~=userhighlighter_sysop] {background-color: #8CF1FF}");
-        mw.util.addCSS("[class~=userhighlighter_checkuser][class~=userhighlighter_sysop] {background-color: #6260FF}");
+        mw.util.addCSS("[class~=userhighlighter_checkuser][class~=userhighlighter_sysop] {background-color: #63FFCB}");
         mw.util.addCSS("[class~=userhighlighter_suppress][class~=userhighlighter_sysop] {background-color: #63FFCB}");
-        mw.util.addCSS("[class~=userhighlighter_arbcom][class~=userhighlighter_sysop] {background-color: #6260FF}");
+        mw.util.addCSS("[class~=userhighlighter_arbcom][class~=userhighlighter_sysop] {background-color: #63FFCB}");
         mw.util.addCSS("[class~=userhighlighter_interface-admin][class~=userhighlighter_sysop] {background-color: #8CF1FF}");
         mw.util.addCSS("[class~=userhighlighter_bureaucrat][class~=userhighlighter_sysop] {background-color: #E2B1FF}");
         mw.util.addCSS("[class~=userhighlighter_steward] {background-color: #FFA8A8}");
