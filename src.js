@@ -168,19 +168,19 @@ mw.hook('wikipage.content').add(async function() {
     ADMINHIGHLIGHT_NAMESPACES = [-1,2,3];
 
     mw.loader.using(['mediawiki.util','mediawiki.Uri', 'mediawiki.Title'], function() {
-        mw.util.addCSS("[class~=userhighlighter_excon] {background-color: #D6ECE0}");
-        mw.util.addCSS("[class~=userhighlighter_pcusr] {background-color: #B9DDB0}");
-        mw.util.addCSS("[class~=userhighlighter_rbckr] {background-color: #B9DDB0}");
-        mw.util.addCSS("[class~=userhighlighter_ptusr] {background-color: #B9DDB0}");
-        mw.util.addCSS("[class~=userhighlighter_pgmvr],[class~=userhighlighter_flmvr] {background-color: #F9CADE}");
-        mw.util.addCSS("[class~=userhighlighter_temop] {background-color: #F7F39B}");
-        mw.util.addCSS("[class~=userhighlighter_sysop] {background-color: #C1E2F8}");
-        mw.util.addCSS("[class~=userhighlighter_interface-admin][class~=userhighlighter_sysop] {background-color: #C1E2F8}");
-        mw.util.addCSS("[class~=userhighlighter_suppress][class~=userhighlighter_sysop] {background-color: #CDB6D8}");
-        mw.util.addCSS("[class~=userhighlighter_checkuser][class~=userhighlighter_sysop] {background-color: #809DD2}");
-        mw.util.addCSS("[class~=userhighlighter_arbcom][class~=userhighlighter_sysop] {background-color: #809DD2}");
-        mw.util.addCSS("[class~=userhighlighter_bureaucrat][class~=userhighlighter_sysop] {background-color: #A0D3DD}");
-        mw.util.addCSS("[class~=userhighlighter_steward] {background-color: #C6C6C5}");
+        mw.util.addCSS("[class~=userhighlighter_excon] {background-color: #b8ddb1}");
+        mw.util.addCSS("[class~=userhighlighter_pcusr] {background-color: #b8ddb1}");
+        mw.util.addCSS("[class~=userhighlighter_rbckr] {background-color: #b8ddb1}");
+        mw.util.addCSS("[class~=userhighlighter_ptusr] {background-color: #b8ddb1}");
+        mw.util.addCSS("[class~=userhighlighter_pgmvr],[class~=userhighlighter_flmvr] {background-color: #f7f39b}");
+        mw.util.addCSS("[class~=userhighlighter_temop] {background-color: #f7f39b}");
+        mw.util.addCSS("[class~=userhighlighter_sysop] {background-color: #c1e2f8}");
+        mw.util.addCSS("[class~=userhighlighter_interface-admin][class~=userhighlighter_sysop] {background-color: #c1e2f8}");
+        mw.util.addCSS("[class~=userhighlighter_suppress][class~=userhighlighter_sysop] {background-color: #f8cadf}");
+        mw.util.addCSS("[class~=userhighlighter_checkuser][class~=userhighlighter_sysop] {background-color: #f8cadf}");
+        mw.util.addCSS("[class~=userhighlighter_arbcom][class~=userhighlighter_sysop] {background-color: #f8cadf}");
+        mw.util.addCSS("[class~=userhighlighter_bureaucrat][class~=userhighlighter_sysop] {background-color: #f8cadf}");
+        mw.util.addCSS("[class~=userhighlighter_steward] {background-color: #ece4cc}");
         $('#article a, #bodyContent a, #mw_contentholder a').each(function(index,linkraw){
             try {
                 var link = $(linkraw);
